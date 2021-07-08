@@ -88,5 +88,7 @@ function handleClick() {
   img.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
   text.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
 
+  document.body.style.background = c1 ;
+
 };
 
