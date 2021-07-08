@@ -12,28 +12,15 @@
   
 
   <div id="background">
-    <div id="cont">
-      <center><img src="detected.png" alt="detected"></center>
-      <h1>ВАС ЗАМЕТИЛИ</h1>
+    <div id="cont" onclick="handleClick()">
+      <center><img src="detected.png" alt="detected" id="img"></center>
+      <h1 id="txt">ВАС ЗАМЕТИЛИ</h1>
     </div>
   </div>
 
   <script src="vanta.three.r119.min.js"></script>
   <script src="vanta.fog.min.js"></script>
-  <script>
-  VANTA.FOG({
-    el: "#background",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    highlightColor: 0xf7f7f7,
-    midtoneColor: 0x666666,
-    lowlightColor: 0xa09fa2,
-    baseColor: 0x525252
-  })
-  </script>
+  <script src="script.js"></script>
   
 </body>
 </html>
