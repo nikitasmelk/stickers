@@ -7,10 +7,10 @@ let c2 = 0x666666;
 let c3 = 0xa09fa2;
 let c4 = 0x525252;
 
-VANTA.FOG({
+const effect = VANTA.FOG({
   el: "#background",
-  mouseControls: true,
-  touchControls: true,
+  mouseControls: false,
+  touchControls: false,
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
@@ -73,23 +73,20 @@ function getRandomInt() {
 }
 
 function handleClick() {
-  console.log('click');
   c1 = colors[getRandomInt()];
   c2 = colors[getRandomInt()];
   c3 = colors[getRandomInt()];
   c4 = colors[getRandomInt()];
 
-  VANTA.FOG({
-    el: "#background",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
+  effect.setOptions({
     highlightColor: c1,
     midtoneColor: c2,
     lowlightColor: c3,
     baseColor: c4
-  });
+  })
+
+  img.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
+  text.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
+
 };
 
