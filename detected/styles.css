@@ -11,6 +11,7 @@
 
 body{
   background: grey; 
+  cursor: url("wowhand.cur"), auto;
 }
 
 #cont{
@@ -53,5 +54,9 @@ h1{
   text-align: center;
   font-size: 10vw;
   font-family: 'Raleway', sans-serif;
+}
+
+.content{
+  cursor: url("wowhand_active.cur"), pointer;
 }
 
