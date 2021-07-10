@@ -1,6 +1,10 @@
 let content = document.getElementById("cont");
 let text = document.getElementById("txt");
 let img = document.getElementById("img");
+var alertAudio = new Audio("alert.mp3");
+alertAudio.volume = 0.1;
+
+let audioPlayed = false;
 
 let c1 = 0xf7f7f7;
 let c2 = 0x666666;
@@ -73,6 +77,11 @@ function getRandomInt() {
 }
 
 function handleClick() {
+  if(!audioPlayed){
+    alertAudio.play();
+    audioPlayed = true;
+  }
+
   c1 = colors[getRandomInt()];
   c2 = colors[getRandomInt()];
   c3 = colors[getRandomInt()];
