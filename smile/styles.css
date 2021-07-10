@@ -21,6 +21,10 @@
   border: 1px solid blue;
 } */
 
+img{
+  opacity: 0;
+}
+
 
 @media screen and (orientation:landscape) {
   img{
