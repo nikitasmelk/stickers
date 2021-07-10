@@ -4,6 +4,8 @@ let img = document.getElementById("img");
 var alertAudio = new Audio("alert.mp3");
 alertAudio.volume = 0.1;
 
+const canVibrate = window.navigator.vibrate;
+
 let audioPlayed = false;
 
 let c1 = 0xf7f7f7;
@@ -82,7 +84,7 @@ function handleClick() {
     audioPlayed = true;
   }
 
-  window.navigator.vibrate(200);
+  if (canVibrate) window.navigator.vibrate(200);
 
   c1 = colors[getRandomInt()];
   c2 = colors[getRandomInt()];
