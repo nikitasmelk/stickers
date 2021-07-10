@@ -82,6 +82,8 @@ function handleClick() {
     audioPlayed = true;
   }
 
+  window.navigator.vibrate(200);
+
   c1 = colors[getRandomInt()];
   c2 = colors[getRandomInt()];
   c3 = colors[getRandomInt()];
