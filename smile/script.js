@@ -6,7 +6,7 @@ function ready() {
 
   setTimeout(function() {
     gif.src = "animation_loop.gif";
-  }, 22000);
+  }, 23000);
 }
 
 document.addEventListener("DOMContentLoaded", ready);
