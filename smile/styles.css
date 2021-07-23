@@ -25,6 +25,10 @@ img{
   opacity: 0;
 }
 
+.invert{
+  filter: invert(100%);
+}
+
 
 @media screen and (orientation:landscape) {
   img{
