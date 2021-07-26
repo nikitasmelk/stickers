@@ -1,6 +1,6 @@
 var gif = document.getElementById("gif");
 var bg = document.getElementById("backgroundVideo");
-let swapped = false;
+let swapped = 1;
 
 function ready() {
   gif.style.opacity = 1;
@@ -23,5 +23,7 @@ function handleClick(){
   }
   
 }
+
+// что ты ищещь?
 
 document.addEventListener("DOMContentLoaded", ready);

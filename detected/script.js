@@ -1,7 +1,8 @@
 let content = document.getElementById("cont");
 let text = document.getElementById("txt");
 let img = document.getElementById("img");
-var alertAudio = new Audio("alert.mp3");
+// var alertAudio = new Audio("alert.mp3");
+var alertAudio = document.getElementById("snd");
 alertAudio.volume = 0.1;
 
 const canVibrate = window.navigator.vibrate;
