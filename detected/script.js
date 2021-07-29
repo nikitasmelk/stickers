@@ -85,7 +85,7 @@ function handleClick() {
     audioPlayed = true;
   }
 
-  if (canVibrate) window.navigator.vibrate(20000);
+  if (canVibrate) window.navigator.vibrate(200);
 
   c1 = colors[getRandomInt()];
   c2 = colors[getRandomInt()];
