@@ -1,1 +1,0 @@
-window.location.replace('https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript');
