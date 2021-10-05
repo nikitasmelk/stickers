@@ -16,6 +16,6 @@ https://nikiboy.art/detected
 
 https://nikiboy.art/smile
 
-https://nikiboy.art/smile/coming/soon
+https://nikiboy.art/coming/soon
 
 
