@@ -1,0 +1,135 @@
+@font-face { 
+  font-family: 'CustomFont';
+  src: url('font/custom.woff') format('woff');
+}
+
+body{
+  background-color: black;
+  background-image: url(brick.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    background-size: contain;
+  }
+}
+
+.text{
+  font-family: CustomFont;
+  font-size: 16vw;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  /* border: 1px solid orange; */
+  opacity: 1;
+}
+
+.tag{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* border: 1px solid red; */
+}
+
+.tag_img{
+  transform: rotate(350deg);
+  opacity: 30%;
+  height: 200px;
+  filter: invert(10%);
+}
+
+.stickman{
+  position: absolute;
+  filter: invert(100%) drop-shadow(0px 0px 15px rgba(252,240,10,1)) ;
+  opacity: 0;
+    
+}
+
+.siren{
+  /* border: 1px solid red; */
+  /* position: absolute; */
+  margin: auto;
+  margin-top: -15px;
+  height: 100px;
+  width: 100px;
+  /* transform: translate(-50%, 0); */
+  background-image: url(siren_lamp.gif);
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
+.circle{
+  position: absolute;
+  width: 200%;
+  height: 250%;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  animation: 
+    0.5s
+    /* ease-out */
+    0s
+    alternate
+    infinite;
+    /* none */
+    /* running; */
+  animation-name: lights;
+
+}
+
+@keyframes lights {
+  from {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1));
+  }
+
+  20% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.9));
+  }
+
+  30% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.8));
+  }
+
+  40% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.7));
+  }
+
+  50% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.6));
+  }
+
+  60% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.5));
+  }
+
+  70% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.4)); 
+  }
+
+  80% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.3));
+  }
+
+  90% {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.2)); 
+  }
+
+  to {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0));
+  }
+}
