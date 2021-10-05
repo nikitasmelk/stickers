@@ -16,6 +16,6 @@ https://nikiboy.art/detected
 
 https://nikiboy.art/smile
 
-https://github.com/nikitasmelk/stickers
+https://nikiboy.art/smile/coming/soon
 
 
