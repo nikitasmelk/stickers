@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
+html, body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 body{
   background: black;
 }
@@ -18,7 +22,7 @@ body{
   background-color: black;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   animation-name: shrink;
   animation-duration: 4s;
   animation-delay: 1s;
