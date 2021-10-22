@@ -124,4 +124,4 @@ function clearFonts() {
 };
 
 // setTimeout(changeFonts, num);
-setTimeout(clearFonts, 5000);
+setTimeout(clearFonts, 50000);
