@@ -46,7 +46,7 @@ let teleported = false;
 let letters = document.getElementsByTagName("a");
 let array_of_fonts = [`'Times New Roman'`, `'Rampart One', cursive`, 
 `'Shadows Into Light', cursive`, `'Architects Daughter', cursive`, 
- `'Fredericka the Great', cursive`, `'Cabin Sketch', cursive`, `'Arial'`
+ `'Fredericka the Great', cursive`, `'Cabin Sketch', cursive`, `'ArialBlack-'`
 ];
 let array_of_links = []; 
 let array_of_colors = ["pink", "green", "yellow", "red", "purple", "blue", "black"];
@@ -112,7 +112,7 @@ function clearFonts() {
 
     for(let j = 0; j < array_of_letters[i].length; j++){
 
-      array_of_letters[i][j].style.fontFamily = 'Arial, Helvetica, sans-serif';
+      array_of_letters[i][j].style.fontFamily = 'ArialBlack-, sans-serif';
       array_of_letters[i][j].style.color = 'black';
     }
   }
