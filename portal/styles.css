@@ -6,7 +6,8 @@
 
 @font-face {
   font-family: 'ArialBlack-';
-  src: url('arial-black.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('arial-black.woff') format('woff'), /* Modern Browsers */
+       url('arial-black.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 html, body{
@@ -57,8 +58,7 @@ body{
 }
 
 .word{
-  font-family:Arial, 'ArialBlack-', sans-serif;
-  font-weight: 900;
+  font-family:'ArialBlack-', sans-serif;
   text-align: center;
   width: 100%;
   font-size: 100px;
