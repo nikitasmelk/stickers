@@ -12,6 +12,7 @@
 body{
   background: grey; 
   cursor: url("wowhand.cur"), auto;
+  overflow: hidden;
 }
 
 #cont{

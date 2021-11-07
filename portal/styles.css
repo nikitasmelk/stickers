@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
+@font-face {
+  font-family: 'ArialBlack-';
+  src: url('arial-black.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 html, body{
   overflow-x: hidden;
   overflow-y: hidden;
@@ -52,7 +57,7 @@ body{
 }
 
 .word{
-  font-family:Arial, sans-serif;
+  font-family:Arial, 'ArialBlack-', sans-serif;
   font-weight: 900;
   text-align: center;
   width: 100%;
