@@ -76,14 +76,14 @@ body{
 
   .text{
     text-shadow:
-    0 0 2px #fff,
-    0 0 3px #fff,
-    0 0 6px #fff,
-    0 0 12px var(--main),
-    0 0 24px var(--main),
-    0 0 27px var(--main),
-    0 0 31px var(--main),
-    0 0 40px var(--main);
+    0 0 1vw #fff,
+    0 0 3vw #fff,
+    0 0 6vw #fff,
+    0 0 12vw var(--main),
+    0 0 24vw var(--main),
+    0 0 27vw var(--main),
+    0 0 31vw var(--main),
+    0 0 40vw var(--main);
   }
 
   .tag{
