@@ -16,39 +16,6 @@ body{
   overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
-  body{
-    background-size: 178vh 100vh;
-    background-position-x:30%;
-    
-  }
-
-  .tag{
-    position: fixed;
-    top: 5vh;
-    right: 0;
-    bottom: none;
-    width: min-content;
-  }
-
-  .stickman{
-    width: 90vw;
-    height: 90vw;
-  }
-}
-
-@media screen and (min-width:601px){
-  .stickman{
-    width: 40vw;
-    height: 40vw;
-  }
-  
-  .tag{
-    bottom: 4vh;
-    right: 8vh;
-  }
-}
-
 
 .text{
   position: fixed;
@@ -107,4 +74,49 @@ body{
   drop-shadow(0px 0px 3px #000)
   drop-shadow(0px 0px 10px var(--second))
   drop-shadow(0px 0px 20px var(--second)) invert(1);
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    background-size: 178vh 100vh;
+    background-position-x:30%;
+    
+  }
+
+  .text{
+    text-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff,
+    0 0 7px var(--main),
+    0 0 14px var(--main),
+    0 0 20px var(--main),
+    0 0 35px var(--main),
+    0 0 60px var(--main);
+  }
+
+  .tag{
+    position: fixed;
+    top: 5vh;
+    right: 0;
+    bottom: none;
+    width: min-content;
+  }
+
+  .stickman{
+    width: 90vw;
+    height: 90vw;
+  }
+}
+
+@media screen and (min-width:601px){
+  .stickman{
+    width: 40vw;
+    height: 40vw;
+  }
+  
+  .tag{
+    bottom: 4vh;
+    right: 8vh;
+  }
 }
