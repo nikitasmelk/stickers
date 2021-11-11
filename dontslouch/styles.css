@@ -13,15 +13,57 @@ body{
   background-image: url(brick.jpg);
   /* background-size: contain; */
   background-size: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
+
+@media screen and (max-width: 600px) {
+  body{
+    background-size: 178vh 100vh;
+    background-position-x:30%;
+    
+  }
+
+  .tag{
+    position: fixed;
+    top: 5vh;
+    right: 0;
+    bottom: none;
+    width: min-content;
+  }
+
+  .stickman{
+    width: 90vw;
+    height: 90vw;
+  }
+}
+
+@media screen and (min-width:601px){
+  .stickman{
+    width: 40vw;
+    height: 40vw;
+  }
+  
+  .tag{
+    bottom: 4vh;
+    right: 8vh;
+  }
+}
+
 
 .text{
   position: fixed;
   font-family: CustomFont;
   font-size: 16vw;
   color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--main),
+    0 0 82px var(--main),
+    0 0 92px var(--main),
+    0 0 102px var(--main),
+    0 0 151px var(--main);
   width: max-content;
   
   top: 50%;
@@ -57,7 +99,7 @@ body{
 
   /* background: yellow; */
   /* border: 1px solid black; */
-  background-image: url(stickman_2.gif);
+  background-image: url(stick_man.gif);
   background-size: contain;
   
   filter:
@@ -65,61 +107,4 @@ body{
   drop-shadow(0px 0px 3px #000)
   drop-shadow(0px 0px 10px var(--second))
   drop-shadow(0px 0px 20px var(--second)) invert(1);
-}
-
-@media screen and (max-width: 600px) {
-  body{
-    background-size: 178vh 100vh;
-    background-position-x:30%;
-    
-  }
-
-  .text{
-    text-shadow:
-    0 0 1px #fff,
-    0 0 3px #fff,
-    0 0 6px #fff,
-    0 0 12px var(--main),
-    0 0 24px var(--main),
-    0 0 27px var(--main),
-    0 0 31px var(--main),
-    0 0 40px var(--main);
-  }
-
-  .tag{
-    position: fixed;
-    top: 5vh;
-    right: 0;
-    bottom: none;
-    width: min-content;
-  }
-
-  .stickman{
-    width: 90vw;
-    height: 90vw;
-  }
-}
-
-@media screen and (min-width:601px){
-  .stickman{
-    width: 40vw;
-    height: 40vw;
-  }
-
-  .text{
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px var(--main),
-    0 0 82px var(--main),
-    0 0 92px var(--main),
-    0 0 102px var(--main),
-    0 0 151px var(--main);
-  }
-  
-  .tag{
-    bottom: 4vh;
-    right: 8vh;
-  }
 }
