@@ -8,7 +8,7 @@
   <link rel="icon" href="/icon.png" type="image/icon type">
   <title>A.D.E.D.</title>
 </head>
-<body>
+<body onclick>
   <div class="cover"></div>
   <div class="square">
     <div class="word">
@@ -53,21 +53,12 @@
       <a class="letter 5">K</a>
     </div>
   </div>
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   <script src="script.js"></script>
-  <script>
-    // detect touch 
-      if (!("ontouchstart" in document.documentElement)) {
-        document.documentElement.className += " no-touch";
-      }
-    $('.letter').on('touchstart touchend', function(e) {
-        e.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];  
-        console.log('slide');    
-    });
-    </script>
+  <!-- <script>
   <!-- <script>
     document.addEventListener("click", x=>0)
-  </script> -->
+  </script> --> -->
  
 </body>
 </html>
