@@ -108,14 +108,16 @@ function clearFonts() {
   //repeat
   setTimeout(changeFonts, num);
 
-  for(let i = 0; i < array_of_letters.length; i++){
+  // for(let i = 0; i < array_of_letters.length; i++){
 
-    for(let j = 0; j < array_of_letters[i].length; j++){
+  //   for(let j = 0; j < array_of_letters[i].length; j++){
 
-      array_of_letters[i][j].style.fontFamily = 'ArialBlack-, sans-serif';
-      array_of_letters[i][j].style.color = 'black';
-    }
-  }
+  //     array_of_letters[i][j].style.fontFamily = 'ArialBlack-, sans-serif';
+  //     // array_of_letters[i][j].style.color = 'black';
+  //   }
+  // }
+
+
   // array_of_letters.forEach(i => {
   //   i.forEach(j => {
   //     j.style.fontFamily = 'Arial, Helvetica, sans-serif';
