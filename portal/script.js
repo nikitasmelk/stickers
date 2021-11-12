@@ -71,6 +71,10 @@ for (let i = 0; i < letters.length; i++) {
     event.target.style.color = 'black';
   }, false);
 
+  letters[i].addEventListener('swiped', function(e) {
+    e.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];
+  });
+
   // letters[i].addEventListener("click", function( event ) {
   //   // highlight the mouseenter target
   //   let rand = getRandomInt()
@@ -79,6 +83,10 @@ for (let i = 0; i < letters.length; i++) {
   // }, false);
 
 }
+
+
+//Detecting swiping on phone
+
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
