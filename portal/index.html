@@ -12,23 +12,12 @@
   <div class="cover"></div>
   <div class="square">
     <div class="word">
-      <a data-swipe-threshold="1"
-      data-swipe-timeout="10"  class="letter 1">S</a>
-      <a data-swipe-threshold="1"
-      data-swipe-timeout="10"
-        class="letter 1">P</a>
-      <a data-swipe-threshold="1"
-      data-swipe-timeout="10"
-        class="letter 1">A</a>
-      <a data-swipe-threshold="1"
-      data-swipe-timeout="10"
-        class="letter 1">C</a>
-      <a data-swipe-threshold="1"
-      data-swipe-timeout="10"
-        class="letter 1">E</a>
-      <a data-swipe-threshold="1"
-      data-swipe-timeout="10"
-        class="letter 1">R</a>
+      <a class="letter 1">S</a>
+      <a class="letter 1">P</a>
+      <a class="letter 1">A</a>
+      <a class="letter 1">C</a>
+      <a class="letter 1">E</a>
+      <a class="letter 1">R</a>
     </div>
 
     <div class="word">
@@ -64,8 +53,18 @@
       <a class="letter 5">K</a>
     </div>
   </div>
-  <script src="swiped-events.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    // detect touch 
+      if (!("ontouchstart" in document.documentElement)) {
+        document.documentElement.className += " no-touch";
+      }
+    $('.letter').on('touchstart touchend', function(e) {
+        e.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];  
+        console.log('slide');    
+    });
+    </script>
   <!-- <script>
     document.addEventListener("click", x=>0)
   </script> -->
