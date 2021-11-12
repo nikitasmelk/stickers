@@ -59,7 +59,7 @@ for (let i = 0; i < letters.length; i++) {
     // highlight the mouseenter target
     // let rand = getRandomInt(array_of_fonts.length);
     // event.target.style.fontFamily = array_of_fonts[getRandomInt(array_of_fonts.length)];
-    event.target.style.color = array_of_colors[getRandomInt(colors.length)];
+    event.target.style.color = colors[getRandomInt(colors.length)];
     //font-family:Georgia, 'Times New Roman', Times, serif;
   
     // reset the color after a short delay
