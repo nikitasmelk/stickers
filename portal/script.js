@@ -54,22 +54,22 @@ let array_of_colors = ["pink", "green", "yellow", "red", "purple", "blue", "blac
 let array_of_letters = [document.getElementsByClassName("letter 1"),document.getElementsByClassName("letter 2"),document.getElementsByClassName("letter 3"),document.getElementsByClassName("letter 4"),document.getElementsByClassName("letter 5")];
 
 for (let i = 0; i < letters.length; i++) {
-  letters[i].addEventListener("mouseenter", function( event ) {
-    // highlight the mouseenter target
-    // let rand = getRandomInt(array_of_fonts.length);
-    // event.target.style.fontFamily = array_of_fonts[getRandomInt(array_of_fonts.length)];
-    event.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];
-    //font-family:Georgia, 'Times New Roman', Times, serif;
+  // letters[i].addEventListener("mouseenter", function( event ) {
+  //   // highlight the mouseenter target
+  //   // let rand = getRandomInt(array_of_fonts.length);
+  //   // event.target.style.fontFamily = array_of_fonts[getRandomInt(array_of_fonts.length)];
+  //   event.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];
+  //   //font-family:Georgia, 'Times New Roman', Times, serif;
   
-    // reset the color after a short delay
-    // setTimeout(function() {
-    //   event.target.style.color = "";
-    // }, 500);
-  }, false);
+  //   // reset the color after a short delay
+  //   // setTimeout(function() {
+  //   //   event.target.style.color = "";
+  //   // }, 500);
+  // }, false);
 
-  letters[i].addEventListener("mouseleave", function( event ) {
-    event.target.style.color = 'black';
-  }, false);
+  // letters[i].addEventListener("mouseleave", function( event ) {
+  //   event.target.style.color = 'black';
+  // }, false);
 
   document.addEventListener('swiped', function(e) {
     e.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];
