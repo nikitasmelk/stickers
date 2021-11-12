@@ -73,6 +73,7 @@ for (let i = 0; i < letters.length; i++) {
 
   letters[i].addEventListener('swiped', function(e) {
     e.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];
+    window.location.href = "https://ru.wikipedia.org/wiki/Special:Random";
   });
 
   // letters[i].addEventListener("click", function( event ) {
