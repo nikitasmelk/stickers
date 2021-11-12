@@ -50,7 +50,7 @@ let array_of_fonts = [`'Times New Roman'`, `'Rampart One', cursive`,
  `'Fredericka the Great', cursive`, `'Cabin Sketch', cursive`, `'ArialBlack-'`
 ];
 let array_of_links = []; 
-let array_of_colors = ["pink", "green", "yellow", "red", "purple", "blue", "black"];
+// let array_of_colors = ["pink", "green", "yellow", "red", "purple", "blue", "black"];
 // let array_of_letters = [['S', 'P', 'A', 'C', 'E', 'R'],['N', 'A', 'M', 'E', 'R'],['J', 'U', 'I', 'C', 'E'],['C', 'O', 'Z', 'E', 'K'],['C', 'A', 'P', 'T', 'E', 'K']];
 let array_of_letters = [document.getElementsByClassName("letter 1"),document.getElementsByClassName("letter 2"),document.getElementsByClassName("letter 3"),document.getElementsByClassName("letter 4"),document.getElementsByClassName("letter 5")];
 
@@ -59,7 +59,7 @@ for (let i = 0; i < letters.length; i++) {
     // highlight the mouseenter target
     // let rand = getRandomInt(array_of_fonts.length);
     // event.target.style.fontFamily = array_of_fonts[getRandomInt(array_of_fonts.length)];
-    event.target.style.color = array_of_colors[getRandomInt(array_of_colors.length)];
+    event.target.style.color = array_of_colors[getRandomInt(colors.length)];
     //font-family:Georgia, 'Times New Roman', Times, serif;
   
     // reset the color after a short delay
