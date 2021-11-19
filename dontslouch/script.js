@@ -103,6 +103,6 @@ function padZero(str, len) {
   return (zeros + str).slice(-len);
 }
 
-setInterval(swap, 5000);
+setInterval(swap, 3000);
 
 text.addEventListener("click", handleCLick)
