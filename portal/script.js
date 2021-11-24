@@ -45,6 +45,7 @@ let num = 1000;
 let teleported = false;
 
 let letters = document.getElementsByTagName("a");
+let box = document.getElementById("square");
 let array_of_fonts = [`'Times New Roman'`, `'Rampart One', cursive`, 
 `'Shadows Into Light', cursive`, `'Architects Daughter', cursive`, 
  `'Fredericka the Great', cursive`, `'Cabin Sketch', cursive`, `'ArialBlack-'`
@@ -141,3 +142,14 @@ function clearFonts() {
 
 // setTimeout(changeFonts, num);
 setTimeout(clearFonts, 5000);
+
+let handleCLick = function () {
+  // console.log('hi');
+  document.body.style.background = colors[getRandomInt(colors.length)];
+  console.log('click');
+
+  // console.log( rand);
+}
+
+box.addEventListener("click", handleCLick);
+
