@@ -102,7 +102,16 @@ function handleClick() {
   img.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
   text.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
 
-  document.body.style.background = c1 ;
+  document.body.style.background = c1;
+
+  //count clicks
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detectedClicks");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      console.log(`Кнопка была нажата в ${this.response.value} раз`);
+  }
+  xhr.send();
 
 };
 
