@@ -91,6 +91,24 @@ for (let i = 0; i < letters.length; i++) {
 
 }
 
+function ready(){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/portal-visits");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      console.log(this.response.value);
+  }
+  xhr.send();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-visits");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      console.log(this.response.value);
+  }
+  xhr.send();
+}
+
 
 //Detecting swiping on phone
 
@@ -116,6 +134,14 @@ function clearFonts() {
   if(num > 40) {
     num = num / 1.1;
   } else if(!teleported){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/portal-teleports");
+    xhr.responseType = "json";
+    xhr.onload = function() {
+        console.log(`Кнопка была нажата в ${this.response.value} раз`);
+    }
+    xhr.send();
+
     window.location.href = "https://ru.wikipedia.org/wiki/Special:Random";
     teleported = true;
   } 
@@ -149,7 +175,26 @@ let handleCLick = function () {
   console.log('click');
 
   // console.log( rand);
+
+  //count interactions
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/portal-clicks");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      console.log(`Кнопка была нажата в ${this.response.value} раз`);
+  }
+  xhr.send();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-interactions");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      console.log(`Кнопка была нажата в ${this.response.value} раз`);
+  }
+  xhr.send();
 }
 
 box.addEventListener("click", handleCLick);
+
+document.addEventListener("DOMContentLoaded", ready);
 

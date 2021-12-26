@@ -54,3 +54,8 @@ h1{
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.title{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
