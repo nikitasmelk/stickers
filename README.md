@@ -18,6 +18,8 @@ https://nikiboy.art/smile
 
 https://nikiboy.art/coming/soon
 
-https://nikiboy.art/dontslouch -> in progress
+https://nikiboy.art/dontslouch
 
 https://nikiboy.art/portal -> in progress
+
+https://nikiboy.art/dontslouch -> check stats

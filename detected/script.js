@@ -74,7 +74,7 @@ function ready() {
 
   //counting website visits
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detected-visits");
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detected-visits_");
   xhr.responseType = "json";
   xhr.onload = function() {
       console.log(this.response.value);

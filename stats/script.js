@@ -17,7 +17,7 @@ xhr.send();
 
 //DETECTED
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.countapi.xyz/get/nikiboy.art/detected-visits");
+xhr.open("GET", "https://api.countapi.xyz/get/nikiboy.art/detected-visits_");
 xhr.responseType = "json";
 xhr.onload = function() {
   document.getElementById("detected-visits").innerHTML = `${this.response.value} visits`;
