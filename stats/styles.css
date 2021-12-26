@@ -8,26 +8,26 @@ body{
 .overall-box{
   margin: auto;
   width: 70vw;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .text{
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: fit-content;
   font-size: 1.3rem;
 }
 
 .number{
   height: fit-content;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   font-size: 17vh;
 }
 
 .overall{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: fit-content;
   margin: auto;
   margin-top: 4rem;
