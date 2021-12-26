@@ -74,7 +74,7 @@ function ready() {
 
   //counting website visits
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/DetectedVisits");
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detected-visits");
   xhr.responseType = "json";
   xhr.onload = function() {
       console.log(this.response.value);
@@ -82,7 +82,7 @@ function ready() {
   xhr.send();
 
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/TotalVisits");
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-visits");
   xhr.responseType = "json";
   xhr.onload = function() {
       console.log(this.response.value);
@@ -124,6 +124,14 @@ function handleClick() {
   //count clicks
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detected-clicks");
+  xhr.responseType = "json";
+  xhr.onload = function() {
+      console.log(`Кнопка была нажата в ${this.response.value} раз`);
+  }
+  xhr.send();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-interactions");
   xhr.responseType = "json";
   xhr.onload = function() {
       console.log(`Кнопка была нажата в ${this.response.value} раз`);
