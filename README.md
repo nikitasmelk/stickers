@@ -22,4 +22,4 @@ https://nikiboy.art/dontslouch
 
 https://nikiboy.art/portal -> in progress
 
-https://nikiboy.art/dontslouch -> check stats
+https://nikiboy.art/stats -> check stats
