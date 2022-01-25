@@ -211,7 +211,7 @@ setTimeout(setAnimations, 6000);
 
 let handleCLick = function () {
 
-  if (canVibrate) window.navigator.vibrate(100);
+  if (canVibrate) window.navigator.vibrate(50);
 
 let new_color = colors[getRandomInt(colors.length)];
 
