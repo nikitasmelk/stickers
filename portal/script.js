@@ -44,6 +44,7 @@
 let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12"];
 // let colors = ["#AF7AC5", "#A569BD", "#73C6B6", "#52BE80", "#F7DC6F", "#F5B041"];
 
+const canVibrate = window.navigator.vibrate;
 
 let timer = 1000;
 let teleported = false;
