@@ -20,6 +20,6 @@ https://nikiboy.art/coming/soon
 
 https://nikiboy.art/dontslouch
 
-https://nikiboy.art/portal -> in progress
+https://nikiboy.art/portal
 
 https://nikiboy.art/stats -> check stats
