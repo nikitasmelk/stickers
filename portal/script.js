@@ -210,6 +210,8 @@ setTimeout(setAnimations, 6000);
 
 let handleCLick = function () {
 
+  if (canVibrate) window.navigator.vibrate(200);
+
 let new_color = colors[getRandomInt(colors.length)];
 
 while (rgb2hex(document.body.style.background) == new_color.toLowerCase()){
