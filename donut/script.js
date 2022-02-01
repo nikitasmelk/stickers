@@ -92,7 +92,10 @@
       // }
       pretag.style.color = colors[getRandomInt(colors.length)];
       // pretag.style.fontFamily = array_of_fonts[getRandomInt(array_of_fonts.length)]
-      pretag.style.fontSize = (Math.random() * 2) + "rem"
+      let rand = Math.random() * 2;
+      console.log(rand);
+      pretag.style.fontSize = (rand) + "rem";
+  
 
       if (canVibrate) window.navigator.vibrate(25);
     
