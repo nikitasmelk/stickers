@@ -3,6 +3,8 @@
     var pretag = document.getElementById('d');
     var canvastag = document.getElementById('canvasdonut');
 
+    const canVibrate = window.navigator.vibrate;
+
     let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12"];
   
     var tmr1 = undefined, tmr2 = undefined;
@@ -80,6 +82,8 @@
       //  new_color = colors[getRandomInt(colors.length)]; 
       // }
       pretag.style.color = colors[getRandomInt(colors.length)];
+
+      if (canVibrate) window.navigator.vibrate(25);
     
       }
   
