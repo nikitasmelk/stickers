@@ -2,9 +2,15 @@
   var _onload = function() {
     var pretag = document.getElementById('d');
     var canvastag = document.getElementById('canvasdonut');
+
+    let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12"];
   
     var tmr1 = undefined, tmr2 = undefined;
     var cA=1, sA=0, cB=0, sB=1;
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+      }
   
     // This is copied, pasted, reformatted, and ported directly from my original
     // donut.c code
@@ -66,14 +72,28 @@
   
     asciiframe();
 
-    // window.anim1;
+    let handleCLick = function () { // handle click on white square
+  
+      // let new_color = colors[getRandomInt(colors.length)];
+    
+      // while (rgb2hex(document.body.style.background) == new_color.toLowerCase()){
+      //  new_color = colors[getRandomInt(colors.length)]; 
+      // }
+      pretag.style.color = colors[getRandomInt(colors.length)];
+    
+      }
+  
+      pretag.addEventListener("click", handleCLick); // add click event
   }
 
-  
-  
   if(document.all)
     window.attachEvent('onload',_onload);
   else
     window.addEventListener("load",_onload,false);
+
+
+
+    
+
   })();
   

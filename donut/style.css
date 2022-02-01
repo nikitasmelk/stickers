@@ -1,7 +1,6 @@
 html, body{
   overflow-x: hidden;
   overflow-y: hidden;
-  
 }
 
 body{
@@ -15,7 +14,6 @@ body{
 #d{
   display: block;
   position: absolute;
-  /* font-size: 20rem; */
   color: pink;
   left: 50%;
   top: 50%;
@@ -27,7 +25,7 @@ body{
   color: whitesmoke; 
   font-size: 2vw;
 }
-
+/* 
 #d:active {
   color: red;
-}
+} */
