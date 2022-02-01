@@ -14,10 +14,10 @@ body{
   font-family: monospace;
 
   background-color: black; 
-  color:pink; 
-  font-size: 2vw;
+  color: whitesmoke; 
+  font-size: 2.5vw;
 }
 
-#d:hover {
+#d:active {
   color: red;
 }
