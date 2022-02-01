@@ -6,6 +6,15 @@
     const canVibrate = window.navigator.vibrate;
 
     let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12"];
+
+    let array_of_fonts = [`'ArialBlack-'`, `'Rampart One', cursive`, `'Shadows Into Light', cursive`, 
+                      `'Fredericka the Great', cursive`, `'Playfair Display', serif`, `'Lobster', cursive`, 
+                      `'Teko', sans-serif`, `'Nanum Myeongjo', serif`, `'Monoton', cursive`, `'VT323', monospace`, 
+                      ` 'Rochester', cursive`, `'Cinzel Decorative', cursive`, `'Rye', cursive`, 
+                      `'Seaweed Script', cursive`, `'Grenze Gotisch', cursive`, ` 'Irish Grover', cursive`, 
+                      `'Frijole', cursive`, `'Pirata One', cursive`, ` 'New Rocker', cursive`, `'Junge', serif`, 
+                      `'Ewert', cursive`]; // all fonts
+
   
     var tmr1 = undefined, tmr2 = undefined;
     var cA=1, sA=0, cB=0, sB=1;
@@ -82,6 +91,8 @@
       //  new_color = colors[getRandomInt(colors.length)]; 
       // }
       pretag.style.color = colors[getRandomInt(colors.length)];
+      // pretag.style.fontFamily = array_of_fonts[getRandomInt(array_of_fonts.length)]
+      pretag.style.fontSize = (Math.random() * 3) + "rem"
 
       if (canVibrate) window.navigator.vibrate(25);
     
