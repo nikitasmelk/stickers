@@ -1,0 +1,23 @@
+body{
+  background: black;
+}
+
+#d{
+  display: block;
+  position: absolute;
+  /* font-size: 20rem; */
+  color: pink;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  font-family: monospace;
+
+  background-color: black; 
+  color:pink; 
+  font-size: 2vw;
+}
+
+#d:hover {
+  color: red;
+}
