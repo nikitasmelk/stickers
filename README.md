@@ -22,6 +22,6 @@ https://nikiboy.art/dontslouch
 
 https://nikiboy.art/portal
 
-https://nikiboy.art/portal -> work in progress
+https://nikiboy.art/donut -> work in progress
 
 https://nikiboy.art/stats -> check stats
