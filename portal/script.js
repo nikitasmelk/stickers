@@ -1,4 +1,7 @@
-let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12"];
+// let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12", ];
+
+// update
+let colors = ["#0057b8", "#ffd700"];
 
 const canVibrate = window.navigator.vibrate;
 
@@ -35,7 +38,11 @@ for (let i = 0; i < letters.length; i++) { //loop for adding color functionality
 
   letters[i].addEventListener("mouseleave", function( event ) {
 
-   event.target.style.color = 'black';
+
+  //  event.target.style.color = 'black';
+
+  // update
+  event.target.style.color = document.body.style.color;
 
   }, false);
 }
@@ -80,7 +87,8 @@ if(timer < 100 && !fade_out_activated){ // activate fade out
 if(timer > 40) {
   timer = timer / 1.1; // decrement timer -> speeds up animation
 } else if(!teleported){ // jump to next page
-    window.location.href = "https://ru.wikipedia.org/wiki/Special:Random";
+    // window.location.href = "https://ru.wikipedia.org/wiki/Special:Random";
+    window.location.href = "https://ru.wikipedia.org/wiki/%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0"
     teleported = true;
 
     //counter
@@ -146,6 +154,19 @@ let handleCLick = function () { // handle click on white square
    new_color = colors[getRandomInt(colors.length)]; 
   }
   document.body.style.background = new_color;
+
+  // update
+  console.log(document.body.style.background);
+  if(rgb2hex(document.body.style.background) == "#0057b8"){
+    document.body.style.color = "#ffd700";
+  } else {
+    document.body.style.color = "#0057b8";
+  }
+
+  box.style.backgroundColor = document.body.style.background;
+
+  fade_out_box.style.backgroundColor = document.body.style.background;
+  //
 
 }
 
