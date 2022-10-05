@@ -5,9 +5,10 @@ The idea behind it is to create interactive webpages for strangers to play aroun
 
 I would design stickers with a QR code and conveniently place them around busy city streets to attract most attention.
 
-![](https://github.com/nikitasmelk/stickers/blob/main/_me_/demo.gif)
+Example of QR Code         |     Example of Webpage
+:-------------------------:|:-------------------------:
+<img src="https://github.com/nikitasmelk/stickers/blob/main/_me_/demo_img.jpg" alt="qr" width="30%"/>  |  <img src="https://github.com/nikitasmelk/stickers/blob/main/_me_/demo.gif" alt="web" width="30%"/>
 
-![](https://github.com/nikitasmelk/stickers/blob/main/_me_/demo_img.jpg)
 
 # Sources
 
