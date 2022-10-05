@@ -7,7 +7,7 @@ I would design stickers with a QR code and conveniently place them around busy c
 
 Example of QR Code         |     Example of Webpage
 :-------------------------:|:-------------------------:
-<img src="https://github.com/nikitasmelk/stickers/blob/main/_me_/demo_img.jpg" alt="qr" width="50%"/>  |  <img src="https://github.com/nikitasmelk/stickers/blob/main/_me_/demo.gif" alt="web" width="50%"/>
+<img src="https://github.com/nikitasmelk/stickers/blob/main/_me_/demo_img.jpg" alt="qr" width="100%"/>  |  <img src="https://github.com/nikitasmelk/stickers/blob/main/_me_/demo.gif" alt="web" width="100%"/>
 
 
 # Sources
