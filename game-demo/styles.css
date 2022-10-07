@@ -6,6 +6,7 @@ html{
 
 
 body{
+  background-color: #888119;
   font-family: 'IBM Plex Mono', monospace;
   background-image: url('floor_sprite.png');
   cursor: url("cursor.cur"), pointer;
