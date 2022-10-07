@@ -66,3 +66,38 @@ body{
   width: 100%;
 
 }
+
+@media (max-width: 500px) { 
+  .title img{
+    margin-top: 3vw;
+    width: 80%;
+  }
+
+  .description{
+    margin: auto;
+    margin-top: 4vw;
+    width: 80%;
+    font-size: 6vw;
+  }
+
+  .gifs{
+    margin-top: 5vw;
+    gap: 10vw;
+    flex-direction: column;
+    margin-bottom: 10vw;
+  }
+
+  .download{
+    display: none;
+  }
+
+  .showcase_container{
+    width: 80%;
+    margin: auto;
+  }
+
+  .showcase_container h1{
+    font-size: 8vw;
+    margin-top: 2%;
+  }
+}
