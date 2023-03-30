@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotating 3D Cube</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        cursor: url('cursor.cur'), auto;
+        /* cursor: none; */
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+      }
+
+      body:active{
+                filter: invert(100%);
+        -webkit-filter: invert(100%);
+      }
+
+      #container {
+        width: 200px;
+        height: 200px;
+        /* background-color: grey; */
+        perspective: 20000px
+      }
+      
+      #cube {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        transform-origin: center center;
+        animation: rotate 10s ease-out 1;
+      }
+
+      #container:active{
+                filter: invert(100%);
+        -webkit-filter: invert(100%);
+      }
+
+      img:hover{
+                filter: invert(100%);
+        -webkit-filter: invert(100%);
+      }
+      
+      #cube div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: transparent;
+        border: 3px solid #00ff00; /* Matrix green */
+      }
+
+      img{
+        width: 200px;
+        height: 200px;
+        /* filter: invert(100%);
+        -webkit-filter: invert(100%); */
+        /* filter: invert(100%);
+        -webkit-filter: invert(100%); */
+      }
+
+
+      
+      #cube .front {
+        transform: translateZ(100px);
+      }
+      
+      #cube .back {
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      
+      #cube .right {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      
+      #cube .left {
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      
+      #cube .top {
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      
+      #cube .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+
+      #letter {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 150px;
+        color: black;
+        text-shadow: 0 0 1px #00ff00;
+        font-family: Arial, sans-serif;
+        letter-spacing: -20px;
+      }
+      
+      @keyframes rotate {
+        0% {
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        
+        100% {
+          transform: rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="cube">
+        <div class="front"><img src="matrix-blob.png" alt=""></div>
+        <div class="back"><img src="matrix-face.png" alt=""></div>
+        <div class="right"><img src="matrix-face-2.png" alt=""></div>
+        <div class="left"><img src="matrix-blob-2.png" alt=""></div>
+        <div class="top"><img src="matrix-face-3.png" alt=""></div>
+        <div class="bottom"><img src="matrix-blob-3.png" alt=""></div>
+        <!-- <div id="letter"></div>  -->
+      </div>
+    </div>
+     <script src="script.js"></script>
+  </body>
+</html>
