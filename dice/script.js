@@ -139,7 +139,7 @@ function handleMove(event) {
         isZooming = true;
       } else {
         const zoomFactor = distance / initialDistance;
-        // cube.style.transform = `scale(${zoomFactor})`;
+        cube.style.transform = `scale(${zoomFactor})`;
       }
     } else {
       isZooming = false;
