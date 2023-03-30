@@ -50,9 +50,6 @@ window.addEventListener('resize', () => {
 
 
 
-
-/*
-
 // Speed factors for horizontal and vertical movement
 const speedFactorX = 0.05;
 const speedFactorY = 0.03;
@@ -96,75 +93,3 @@ window.addEventListener('resize', () => {
   // Reset the animation duration to its initial value on window resize
   cube.style.animationDuration = `${initialDuration}s`;
 });
-*/
-
-
-
-
-
-
-
-
-
-const speedFactorX = 0.05;
-const speedFactorY = 0.03;
-
-const cube = document.getElementById('cube');
-const initialDuration = parseFloat(getComputedStyle(cube).getPropertyValue('animation-duration'));
-
-document.addEventListener('mousemove', handleMove);
-document.addEventListener('touchmove', handleMove, { passive: false });
-
-window.addEventListener('resize', () => {
-  cube.style.animationDuration = `${initialDuration}s`;
-});
-
-let isZooming = false;
-let initialDistance = 0;
-
-function handleMove(event) {
-  const isTouchEvent = (event.type === 'touchmove');
-  event.preventDefault();
-
-  if (isTouchEvent) {
-    if (event.touches.length === 2) {
-      const x1 = event.touches[0].clientX;
-      const y1 = event.touches[0].clientY;
-      const x2 = event.touches[1].clientX;
-      const y2 = event.touches[1].clientY;
-      const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-      
-      if (!isZooming) {
-        initialDistance = distance;
-        isZooming = true;
-      } else {
-        const zoomFactor = distance / initialDistance;
-        cube.style.transform = `scale(${zoomFactor})`;
-      }
-    } else {
-      isZooming = false;
-    }
-  }
-  
-  
-  //if (!isZooming) {
-    const posX = (isTouchEvent) ? event.touches[0].clientX : event.clientX;
-    const posY = (isTouchEvent) ? event.touches[0].clientY : event.clientY;
-
-    const rotationX = (0.5 - posY / window.innerHeight) * 360;
-    const rotationY = (posX / window.innerWidth - 0.5) * 360;
-
-    const cubeRect = cube.getBoundingClientRect();
-    const cubeX = cubeRect.left + cubeRect.width / 2;
-    const cubeY = cubeRect.top + cubeRect.height / 2;
-    const distance = Math.sqrt(Math.pow(posX - cubeX, 2) + Math.pow(posY - cubeY, 2));
-
-    const durationX = Math.abs(event.movementX || event.touches[0].movementX) * speedFactorX;
-    const durationY = Math.abs(event.movementY || event.touches[0].movementY) * speedFactorY;
-    const durationZ = 1 - distance / Math.sqrt(window.innerWidth * window.innerHeight);
-    const newDuration = Math.max(Math.min(durationX, durationY), initialDuration);
-    
-    cube.style.animationDuration = `${newDuration * durationZ}s`;
-    cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-  //}
-}
