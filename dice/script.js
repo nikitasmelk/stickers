@@ -135,7 +135,7 @@ function handleMove(event) {
       const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
       
       if (!isZooming) {
-        initialDistance = distance;
+        // initialDistance = distance;
         isZooming = true;
       } else {
         const zoomFactor = distance / initialDistance;
