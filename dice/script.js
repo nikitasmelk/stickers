@@ -146,7 +146,8 @@ function handleMove(event) {
     }
   }
   
-  if (!isZooming) {
+  
+  //if (!isZooming) {
     const posX = (isTouchEvent) ? event.touches[0].clientX : event.clientX;
     const posY = (isTouchEvent) ? event.touches[0].clientY : event.clientY;
 
@@ -165,5 +166,5 @@ function handleMove(event) {
     
     cube.style.animationDuration = `${newDuration * durationZ}s`;
     cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-  }
+  //}
 }
