@@ -43,16 +43,37 @@ const speedFactorX = 0.5;
 const speedFactorY = 0.3;
 let current_color = "#00ff00"; // Matrix green
 let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12", ];
+let brightColors = [
+  '#FFA726',
+  '#9CCC65',
+  '#29B6F6',
+  '#AB47BC',
+  '#FF7043',
+  '#D4E157',
+  '#5C6BC0',
+  '#EC407A',
+  '#8D6E63',
+  '#42A5F5',
+  '#7E57C2',
+  '#26A69A',
+  '#FFCA28',
+  '#FFEE58',
+  '#FF5252'
+];
+
 let new_color = colors[getRandomInt(colors.length)];
 
 // Get the cube element and its initial animation duration
 const cube = document.getElementById('cube');
+console.log(cube.children);
+
+
 const initialDuration = parseFloat(getComputedStyle(cube).getPropertyValue('animation-duration'));
 
 // Add event listeners for mouse move and touch move events
 document.addEventListener('mousemove', handleMove);
 document.addEventListener('touchmove', handleMove);
-// document.addEventListener('click', handleClick);
+cube.addEventListener('click', handleClick);
 
 function handleMove(event) {
   // Get the event position based on the event type (mouse or touch)
@@ -88,11 +109,21 @@ function handleMove(event) {
 function handleClick(){
   console.log('click');
   // document.body.style.backgroundColor = colors[getRandomInt(colors.length)];//colorToColorFilter(current_color, colors[getRandomInt(colors.length)]);
-  new_color = colors[getRandomInt(colors.length)];
+  new_color = brightColors[getRandomInt(brightColors.length)];
   console.log('new color' + new_color);
-  console.log('current color' + current_color)
+  console.log('current color' + current_color);
+
+  Array.from(cube.children).forEach(element => {
+    new_color = brightColors[getRandomInt(brightColors.length)];
+    element.style.filter = colorToColorFilter(current_color, new_color);
+    element.firstChild.style.filter = colorToColorFilter(current_color, new_color);
+
+  });
+
   
-  cube.style.cssText = colorToColorFilter(current_color, new_color);
+  // cube.style.cssText = colorToColorFilter(current_color, new_color);
+  // cube.style.border = `3px solid ${new_color}`
+  // document.body.style.filter = colorToColorFilter(current_color, new_color);
   console.log(colorToColorFilter(current_color, new_color));
   current_color = new_color;
 }
@@ -147,7 +178,8 @@ function colorToColorFilter(hex1, hex2) {
   const sPercent = (s2 - s1) / s1 * 100;
   const lPercent = (l2 - l1) / l1 * 100;
 
-  return `filter: hue-rotate(${parseFloat(hdeg.toFixed(3))}deg) saturate(${parseFloat(sPercent.toFixed(3))}%) brightness(${parseFloat(lPercent.toFixed(3))}%);`;
+  // return `hue-rotate(${parseFloat(hdeg.toFixed(3))}deg) saturate(${parseFloat(sPercent.toFixed(3))}%) brightness(${parseFloat(lPercent.toFixed(3))}%)`;
+  return `hue-rotate(${parseFloat(hdeg.toFixed(3))}deg) saturate(100%) brightness(100%)`;
 }
 
 // Usage example
