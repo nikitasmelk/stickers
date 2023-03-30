@@ -42,7 +42,8 @@ window.addEventListener('resize', () => {
 const speedFactorX = 0.5;
 const speedFactorY = 0.3;
 let current_color = "#00ff00"; // Matrix green
-let perspectives = ['100px', '300px', '50000px', '1000px', '200px'];
+let perspectives = ['50000px', '1000px', '300px', '100px'];
+let perspective_counter = 0;
 let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12", ];
 let brightColors = [
   '#FFA726',
@@ -119,9 +120,12 @@ function handleClick(){
     new_color = brightColors[getRandomInt(brightColors.length)];
     element.style.filter = colorToColorFilter(current_color, new_color);
     element.firstChild.style.filter = colorToColorFilter(current_color, new_color);
-    container.style.perspective = perspectives[getRandomInt(perspectives.length)];
 
   });
+
+  perspective_counter++;
+  if(perspective_counter > (perspectives.length - 1)) perspective_counter = 0;
+  container.style.perspective = perspectives[perspective_counter];
 
   
   // cube.style.cssText = colorToColorFilter(current_color, new_color);
