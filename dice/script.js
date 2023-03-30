@@ -42,6 +42,7 @@ window.addEventListener('resize', () => {
 const speedFactorX = 0.5;
 const speedFactorY = 0.3;
 let current_color = "#00ff00"; // Matrix green
+let perspectives = ['100px', '300px', '50000px', '1000px'];
 let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12", ];
 let brightColors = [
   '#FFA726',
@@ -65,6 +66,7 @@ let new_color = colors[getRandomInt(colors.length)];
 
 // Get the cube element and its initial animation duration
 const cube = document.getElementById('cube');
+const container = document.getElementById('container');
 console.log(cube.children);
 
 
@@ -117,6 +119,7 @@ function handleClick(){
     new_color = brightColors[getRandomInt(brightColors.length)];
     element.style.filter = colorToColorFilter(current_color, new_color);
     element.firstChild.style.filter = colorToColorFilter(current_color, new_color);
+    container.style.perspective = perspectives[getRandomInt(perspectives.length)];
 
   });
 
