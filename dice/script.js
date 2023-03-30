@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
 const speedFactorX = 0.5;
 const speedFactorY = 0.3;
 let current_color = "#00ff00"; // Matrix green
-let perspectives = ['100px', '300px', '50000px', '1000px'];
+let perspectives = ['100px', '300px', '50000px', '1000px', '200px'];
 let colors = [ "#E74C3C", "#9B59B6", "#2980B9", "#2ECC71", "#F1C40F", "#F39C12", ];
 let brightColors = [
   '#FFA726',
