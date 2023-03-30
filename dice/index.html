@@ -9,6 +9,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        overflow: hidden;
         margin: 0;
         cursor: url('cursor.cur'), auto;
         /* cursor: none; */
@@ -111,10 +112,13 @@
       @keyframes rotate {
         0% {
           transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          /* filter: invert(0%); */
+
         }
         
         100% {
           transform: rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+          /* filter: invert(100%); */
         }
       }
     </style>
