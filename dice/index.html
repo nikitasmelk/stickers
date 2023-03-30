@@ -4,7 +4,7 @@
     <title>Play a Game?</title>
     <style>
       body {
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,10 +22,10 @@
                                   supported by Chrome, Edge, Opera and Firefox */
       }
 
-      body:active{
+      /* body:active{
                 filter: invert(100%);
         -webkit-filter: invert(100%);
-      }
+      } */
 
       #container {
         width: 200px;
@@ -44,15 +44,15 @@
         animation: rotate 10s ease-out 1;
       }
 
-      #container:active{
+      /* #container:active{
                 filter: invert(100%);
         -webkit-filter: invert(100%);
-      }
-
+      } */
+/* 
       img:hover{
                 filter: invert(100%);
         -webkit-filter: invert(100%);
-      }
+      } */
       
       #cube div {
         position: absolute;
@@ -108,6 +108,8 @@
         font-family: Arial, sans-serif;
         letter-spacing: -20px;
       }
+
+      .colored{}
       
       @keyframes rotate {
         0% {
