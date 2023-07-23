@@ -64,6 +64,8 @@ let brightColors = [
 ];
 
 let new_color = colors[getRandomInt(colors.length)];
+let faces = ["faces/matrix-face-2.png","faces/matrix-face-3.png", "faces/matrix-face-4.png", "faces/matrix-face-1.png", "faces/matrix-face-5.png", "faces/matrix-face-6.png", "faces/matrix-face-7.png", "faces/matrix-face-8.png", "faces/matrix-face-9.png"];
+let blobs = ["blobs/matrix-blob-1.png", "blobs/matrix-blob-2.png", "blobs/matrix-blob-3.png", "blobs/matrix-blob-4.png", "blobs/matrix-blob-5.png", "blobs/matrix-blob-6.png", "blobs/matrix-blob-7.png", "blobs/matrix-blob-8.png", "blobs/matrix-blob-9.png"];
 
 // Get the cube element and its initial animation duration
 const cube = document.getElementById('cube');
@@ -110,16 +112,36 @@ function handleMove(event) {
 }
 
 function handleClick(){
+
+  let temp_faces = [...faces];
+  let temp_blobs = [...blobs];
+
+  console.log(temp_blobs);
+  console.log(blobs);
+
   console.log('click');
   // document.body.style.backgroundColor = colors[getRandomInt(colors.length)];//colorToColorFilter(current_color, colors[getRandomInt(colors.length)]);
   new_color = brightColors[getRandomInt(brightColors.length)];
-  console.log('new color' + new_color);
-  console.log('current color' + current_color);
+  //console.log('new color' + new_color);
+  //console.log('current color' + current_color);
+
+  //console.log(cube.children);
+
 
   Array.from(cube.children).forEach(element => {
     new_color = brightColors[getRandomInt(brightColors.length)];
     element.style.filter = colorToColorFilter(current_color, new_color);
     element.firstChild.style.filter = colorToColorFilter(current_color, new_color);
+    if(element.className == "front" || element.className == "bottom" || element.className == "left"){
+      //blobs
+      element.firstChild.src = popRandomValue(temp_blobs);
+      console.log(temp_blobs);
+
+    } else {
+      //faces
+      element.firstChild.src = popRandomValue(temp_faces);
+    }
+
 
   });
 
@@ -143,6 +165,19 @@ window.addEventListener('resize', () => {
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+function popRandomValue(arr) {
+  if (arr.length === 0) {
+      return undefined; // or throw an exception
+  }
+
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  var randomValue = arr[randomIndex];
+
+  arr.splice(randomIndex, 1);
+
+  return randomValue;
 }
 
 
