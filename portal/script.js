@@ -47,24 +47,6 @@ for (let i = 0; i < letters.length; i++) { //loop for adding color functionality
   }, false);
 }
 
-function ready(){ // counters
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/portal-visits");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      // console.log(this.response.value);
-  }
-  xhr.send();
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-visits");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      // console.log(this.response.value);
-  }
-  xhr.send();
-}
-
 function rgb2hex(rgb){ // converts rgb to hex
 rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
 return (rgb && rgb.length === 4) ? "#" +
@@ -90,15 +72,6 @@ if(timer > 40) {
     // window.location.href = "https://ru.wikipedia.org/wiki/Special:Random";
     window.location.href = "https://ru.wikipedia.org/wiki/%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0"
     teleported = true;
-
-    //counter
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/portal-teleports");
-    xhr.responseType = "json";
-    xhr.onload = function() {
-        // console.log(`Кнопка была нажата в ${this.response.value} раз`);
-    }
-    xhr.send();
 
 } else {
   timer = 40; // don't go below 40 (too fast!)
@@ -127,25 +100,6 @@ function changeFont(letter){
 
 let handleCLick = function () { // handle click on white square
 
-
-    //count interactions
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/portal-clicks");
-    xhr.responseType = "json";
-    xhr.onload = function() {
-        // console.log(`Кнопка была нажата в ${this.response.value} раз`);
-    }
-    xhr.send();
-  
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-interactions");
-    xhr.responseType = "json";
-    xhr.onload = function() {
-        // console.log(`Кнопка была нажата в ${this.response.value} раз`);
-    }
-    xhr.send();
-
-
   if (canVibrate) window.navigator.vibrate(25);
 
   let new_color = colors[getRandomInt(colors.length)];
@@ -166,12 +120,9 @@ let handleCLick = function () { // handle click on white square
   box.style.backgroundColor = document.body.style.background;
 
   fade_out_box.style.backgroundColor = document.body.style.background;
-  //
 
 }
 
 box.addEventListener("click", handleCLick); // add click event
 
 setTimeout(setAnimations, 6000); // start initial animation 6s after page loads
-
-document.addEventListener("DOMContentLoaded", ready);// for counter functionality

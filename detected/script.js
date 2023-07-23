@@ -71,23 +71,6 @@ let colors = [
 
 function ready() {
   content.style.opacity = 1;
-
-  //counting website visits
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detected-visits_");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(this.response.value);
-  }
-  xhr.send();
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-visits");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(this.response.value);
-  }
-  xhr.send();
 }
 
 document.addEventListener("DOMContentLoaded", ready);
@@ -120,23 +103,6 @@ function handleClick() {
   text.style.setProperty("filter", `drop-shadow(0.2vw 0.2vw 0.8vw ${c1})`);
 
   document.body.style.background = c1;
-
-  //count clicks
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/detected-clicks");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(`Кнопка была нажата в ${this.response.value} раз`);
-  }
-  xhr.send();
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-interactions");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(`Кнопка была нажата в ${this.response.value} раз`);
-  }
-  xhr.send();
 
 };
 

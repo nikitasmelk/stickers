@@ -76,41 +76,6 @@ let handleCLick = function () {
   r.style.setProperty('--main', rand);
 
   // console.log( rand);
-
-  //count interactions
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/dont-slouch-clicks");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(`Кнопка была нажата в ${this.response.value} раз`);
-  }
-  xhr.send();
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-interactions");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(`Кнопка была нажата в ${this.response.value} раз`);
-  }
-  xhr.send();
-}
-
-function ready() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/dont-slouch-visits");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(this.response.value);
-  }
-  xhr.send();
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.countapi.xyz/hit/nikiboy.art/total-visits");
-  xhr.responseType = "json";
-  xhr.onload = function() {
-      console.log(this.response.value);
-  }
-  xhr.send();
 }
 
 function invertColor(hex) {
@@ -141,5 +106,3 @@ function padZero(str, len) {
 setInterval(swap, 3000);
 
 text.addEventListener("click", handleCLick)
-
-document.addEventListener("DOMContentLoaded", ready);
