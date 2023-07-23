@@ -37,6 +37,7 @@ window.addEventListener('resize', () => {
 });
 
 */
+const canVibrate = window.navigator.vibrate;
 
 // Speed factors for horizontal and vertical movement
 const speedFactorX = 0.5;
@@ -155,6 +156,9 @@ function handleClick(){
   // document.body.style.filter = colorToColorFilter(current_color, new_color);
   console.log(colorToColorFilter(current_color, new_color));
   current_color = new_color;
+
+  // Vibrate
+  if (canVibrate) window.navigator.vibrate(25);
 }
 
 // Add event listener for window resize events
